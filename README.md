@@ -4,6 +4,8 @@
 
 This repository contains an Arduino sketch for an ESP8266 module equipped with an I2C display. The sketch is designed to connect to a specified Wi-Fi network, synchronize the time with an NTP server, calculate a One-Time Password (OTP) based on a secret key, and display this OTP on the screen. This functionality is typically used in two-factor authentication systems.
 
+![Prototype using a Wemos D1](esp-otp-display.jpg)
+
 ## Features
 
 - Connects to a predefined Wi-Fi network.
