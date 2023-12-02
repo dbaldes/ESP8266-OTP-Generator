@@ -8,11 +8,13 @@ This repository contains an Arduino sketch for an ESP8266 module equipped with a
 
 A suitable case can be found here: [Wemos D1 Case with Display on Thingiverse](https://www.thingiverse.com/thing:6347339)
 
+![OTP Generator in 3D-Printed Case](esp-otp-display-case.jpg)
+
 ## Features
 
 - Connects to a predefined Wi-Fi network.
 - Synchronizes time with a specified NTP server.
-- Calculates and displays a Time-based One-Time Password (TOTP) on the I2C display.
+- Calculates and displays two Time-based One-Time Passwords (TOTP) on the I2C display.
 
 ## How to Use
 
@@ -22,7 +24,8 @@ A suitable case can be found here: [Wemos D1 Case with Display on Thingiverse](h
 2. **Configuring the sketch:**
    - Update the Wi-Fi credentials (`ssid` and `password`) in the sketch with your network's details.
    - Set the NTP server address and the UTC offset in seconds for your time zone.
-   - Replace the placeholder for the `secret` byte array with your actual OTP secret key.
+   - Replace the placeholder for the `secret1` and `secret2` byte arrays with your actual OTP secret keys.
+   - Replace the labels "OTP1" and "OTP2" if needed.
 
 3. **Uploading the sketch:**
    - Connect your ESP8266 to your computer and select the correct board and port in the Arduino IDE.

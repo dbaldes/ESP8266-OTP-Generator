@@ -6,8 +6,8 @@
 #include <TOTP.h>
 
 // WiFi credentials
-const char* ssid = "SSID";
-const char* password = "PASSWORD";
+const char* ssid = "WIFI SSID";
+const char* password = "WIFI PASSWORD";
 
 // NTP server settings
 const long utcOffsetInSeconds = 0;
@@ -20,8 +20,8 @@ NTPClient timeClient(ntpUDP, ntpServer, utcOffsetInSeconds);
 SSD1306Wire display(0x3c, SDA, SCL, GEOMETRY_128_32);
 
 // OTP secret keys
-byte secret1[] = { /* secret key */ }
-byte secret2[] = { /* secret key */ }
+byte secret1[] = { /* secret key */ };
+byte secret2[] = { /* secret key */ };
 
 TOTP totp1 = TOTP(secret1, sizeof(secret1));
 TOTP totp2 = TOTP(secret2, sizeof(secret2));
@@ -68,8 +68,10 @@ void displayOTP() {
     // Calculate and display OTP
     String otpString1 = totp1.getCode(timeClient.getEpochTime());
     String otpString2 = totp2.getCode(timeClient.getEpochTime());
-    display.drawString(0, 0, otpString1);
-    display.drawString(0, 16, otpString2);
+    display.drawString(12, 0, "OTP1");
+    display.drawString(64, 0, otpString1);
+    display.drawString(12, 16, "OTP2");
+    display.drawString(64, 16, otpString2);
 
     display.display();
 }
