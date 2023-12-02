@@ -6,6 +6,8 @@ This repository contains an Arduino sketch for an ESP8266 module equipped with a
 
 ![Prototype using a Wemos D1](esp-otp-display.jpg)
 
+A suitable case can be found here: [Wemos D1 Case with Display on Thingiverse](https://www.thingiverse.com/thing:6347339)
+
 ## Features
 
 - Connects to a predefined Wi-Fi network.
